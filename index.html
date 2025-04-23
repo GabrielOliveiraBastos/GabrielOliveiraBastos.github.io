@@ -41,27 +41,37 @@
       padding: 20px;
     }
     .header-content h1 {
-      font-size: 3em;
+      font-size: 3.5em;
       margin-bottom: 20px;
+      font-weight: bold;
+      color: #FFD700; /* Dourado para destacar */
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
     }
     .header-content p {
-      font-size: 1.2em;
+      font-size: 1.5em;
       margin-bottom: 30px;
+      color: #FFD700; /* Cor dourada */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    .preco {
+      font-size: 2.5em;
+      color: #FFD700;
+      font-weight: bold;
+      margin-bottom: 40px;
     }
     .botao {
-      background: green;
+      background: #28a745;
       color: white;
       padding: 15px 30px;
-      font-size: 1.2em;
+      font-size: 1.5em;
       border: none;
       cursor: pointer;
       border-radius: 10px;
-      animation: pulse 1.5s infinite;
+      transition: transform 0.2s ease;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+    .botao:hover {
+      background: #218838;
+      transform: scale(1.05);
     }
     .beneficios {
       background: linear-gradient(to right, #1e1e1e, #2b2b2b);
@@ -78,15 +88,22 @@
       border-radius: 10px;
       width: 300px;
       transition: transform 0.3s;
+      color: white;
+      font-size: 1.2em;
     }
     .beneficio:hover {
       transform: translateY(-5px);
+      background-color: #444;
     }
     footer {
       text-align: center;
       color: #aaa;
       padding: 20px;
       background: #111;
+    }
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -98,7 +115,10 @@
     <div class="overlay"></div>
     <div class="header-content">
       <h1>Transforme seu tempo livre em dinheiro</h1>
-      <p>Adquira nosso e-book completo por apenas <s>R$98,90</s> <strong>R$19,90</strong></p>
+      <p>Adquira nosso e-book completo por apenas</p>
+      <div class="preco">
+        <s>R$98,90</s> <strong>R$19,90</strong>
+      </div>
       <a href="pagamento.html"><button class="botao">Quero Ganhar Dinheiro</button></a>
     </div>
   </header>
@@ -116,7 +136,7 @@
   </div>
 
   <footer>
-    &copy; 2025 Lucros Rápidos. Todos os direitos reservados.
+    &copy; 2025 Lucros Rápidos. Todos os direitos reservados. | <a href="#">Política de Privacidade</a>
   </footer>
 </body>
 </html>
