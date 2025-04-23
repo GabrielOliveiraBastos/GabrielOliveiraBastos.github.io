@@ -162,6 +162,40 @@
     .cta-section button:hover {
       background: #ff7f00;
     }
+
+    /* Benefícios */
+    .feature-section {
+      background-color: #f7f7f7;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .feature {
+      display: inline-block;
+      width: 22%;
+      margin: 20px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature h3 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    .feature p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .feature img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 15px;
+    }
+
   </style>
 </head>
 <body>
@@ -172,6 +206,12 @@
     Seu navegador não suporta vídeos HTML5.
   </video>
   <div class="overlay"></div>
+
+  <!-- Música de fundo -->
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    Seu navegador não suporta áudio.
+  </audio>
 
   <!-- Barra de Navegação -->
   <div class="navbar">
@@ -189,13 +229,14 @@
     <button class="mid-button" onclick="window.location.href='https://seulink.com/ebook'">Clique Aqui para Descobrir o Método!</button>
   </div>
 
-  <div class="cta-section">
+  <div class="cta-section" id="cta">
     <h2>Não Deixe Essa Oportunidade Passar!</h2>
     <p>O conhecimento e as estratégias que você precisa para alcançar sua liberdade financeira estão neste e-book. Comece hoje mesmo e veja os resultados!</p>
     <!-- Botão de compra no fim -->
     <button onclick="window.location.href='https://seulink.com/ebook'">Compre Agora e Mude Sua Vida!</button>
   </div>
 
+  <!-- Benefícios -->
   <div class="feature-section" id="features">
     <div class="feature">
       <h3>Ganhos Imediatos</h3>
@@ -212,6 +253,14 @@
     <div class="feature">
       <h3>Estrutura de Vendas</h3>
       <p>Crie um sistema de vendas simples e automático para ganhar dinheiro enquanto dorme.</p>
+    </div>
+    <div class="feature">
+      <h3>Rendimento Passivo</h3>
+      <p>Descubra como trabalhar uma vez e continuar recebendo pelo resto da vida.</p>
+    </div>
+    <div class="feature">
+      <h3>Escalabilidade</h3>
+      <p>Aprenda a escalar seus resultados para alcançar lucros ainda maiores.</p>
     </div>
   </div>
 
