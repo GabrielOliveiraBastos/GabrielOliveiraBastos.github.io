@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pagamento</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.3em;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 350px;
+      margin: 30px 0;
+      border: 5px solid gold;
+      border-radius: 15px;
+    }
+    .botao {
+      background: gold;
+      color: black;
+      padding: 18px 35px;
+      margin: 20px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .botao:hover {
+      background: #c68c00;
+    }
+    .pix-info {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+    footer {
+      margin-top: 40px;
+      color: #888;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Faça o pagamento via PIX</h1>
+  <p>Escaneie o QR Code abaixo ou copie a chave:</p>
+  
+  <img src="https://api.qrserver.com/v1/create-qr-code/?data=00020126580014BR.GOV.BCB.PIX0130gabrieloliveirabastos8@gmail.com520400005303986540519.905802BR5924Gabriel Oliveira Bastos6009SaoPaulo62070503***6304C4C0" alt="QR Code PIX" />
+  
+  <div class="pix-info">
+    <p><strong>Valor:</strong> R$ 19,90</p>
+    <p><strong>Chave PIX:</strong> gabrieloliveirabastos8@gmail.com</p>
+  </div>
+  
+  <p>Depois do pagamento, envie o comprovante:</p>
+  
+  <a href="mailto:gabrieloliveirabastos8@gmail.com?subject=Comprovante de Pagamento">
+    <button class="botao">Enviar por E-mail</button>
+  </a>
+  <a href="https://wa.me/554299213644?text=Oi!%20Fiz%20o%20pagamento%20do%20ebook,%20segue%20o%20comprovante." target="_blank">
+    <button class="botao">Enviar no WhatsApp</button>
+  </a>
+
+  <footer>
+    &copy; 2025 Lucros Rápidos. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
