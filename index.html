@@ -24,7 +24,6 @@
       min-height: 100%;
       object-fit: cover;
       z-index: -1;
-      animation: moveBackground 20s infinite linear;
     }
 
     .overlay {
@@ -35,16 +34,6 @@
       width: 100%;
       height: 100%;
       z-index: 0;
-    }
-
-    /* Efeito de movimento para o vídeo */
-    @keyframes moveBackground {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-100%);
-      }
     }
 
     .navbar {
@@ -84,13 +73,11 @@
       text-align: center;
       color: white;
       padding: 20px;
-      animation: fadeIn 1.5s ease-out;
     }
 
     .title {
       font-size: 4em;
       font-weight: bold;
-      animation: slideIn 1.5s ease-out;
     }
 
     .subtitle {
@@ -124,47 +111,21 @@
       transform: scale(1.1);
     }
 
-    /* Contador regressivo */
-    .countdown {
-      font-size: 2em;
-      font-weight: bold;
-      margin-top: 50px;
-      color: #ffde59;
-    }
-
-    .feature-section {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 50px 20px;
-      background-color: #111;
-      text-align: center;
-    }
-
-    .feature {
-      background: #333;
-      border: 1px solid #444;
-      padding: 30px;
-      margin: 20px;
-      border-radius: 10px;
-      width: 250px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-    }
-
-    .feature:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    }
-
-    .feature h3 {
-      font-size: 1.5em;
-      color: #ffde59;
-    }
-
-    .feature p {
-      font-size: 1.1em;
+    /* Botão interativo no meio */
+    .mid-button {
+      margin-top: 150px;
+      padding: 20px 50px;
+      font-size: 1.8em;
       color: white;
+      background: #4CAF50;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .mid-button:hover {
+      background: #45a049;
     }
 
     .cta-section {
@@ -201,31 +162,11 @@
     .cta-section button:hover {
       background: #ff7f00;
     }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes slideIn {
-      from {
-        transform: translateY(-50px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <!-- Adicionando múltiplos vídeos em loop -->
+  <!-- Vídeo fixo no fundo -->
   <video class="video-bg" autoplay loop muted playsinline>
     <source src="https://github.com/GabrielOliveiraBastos/GabrielOliveiraBastos.github.io/raw/main/ssstik.io_%40fzvision.ofc_1743114996161.mp4" type="video/mp4">
     Seu navegador não suporta vídeos HTML5.
@@ -243,14 +184,16 @@
     <h1 class="title">Transforme sua Vida com Lucros Rápidos</h1>
     <p class="subtitle">Descubra o passo a passo para lucrar na internet ainda hoje. Método testado, prático e direto ao ponto! Aprenda a gerar sua primeira renda em poucos dias.</p>
     <p class="price">De <del>R$98,90</del> por apenas <strong>R$19,90</strong>!</p>
-    <!-- Botão de compra agora mais abaixo -->
-    <div class="cta-section">
-      <h2>Não Deixe Essa Oportunidade Passar!</h2>
-      <p>O conhecimento e as estratégias que você precisa para alcançar sua liberdade financeira estão neste e-book. Comece hoje mesmo e veja os resultados!</p>
-      <button onclick="window.location.href='https://seulink.com/ebook'">Compre Agora e Mude Sua Vida!</button>
-    </div>
-    <!-- Contador Regressivo -->
-    <div class="countdown" id="countdown"></div>
+
+    <!-- Botão interativo no meio -->
+    <button class="mid-button" onclick="window.location.href='https://seulink.com/ebook'">Clique Aqui para Descobrir o Método!</button>
+  </div>
+
+  <div class="cta-section">
+    <h2>Não Deixe Essa Oportunidade Passar!</h2>
+    <p>O conhecimento e as estratégias que você precisa para alcançar sua liberdade financeira estão neste e-book. Comece hoje mesmo e veja os resultados!</p>
+    <!-- Botão de compra no fim -->
+    <button onclick="window.location.href='https://seulink.com/ebook'">Compre Agora e Mude Sua Vida!</button>
   </div>
 
   <div class="feature-section" id="features">
@@ -271,28 +214,6 @@
       <p>Crie um sistema de vendas simples e automático para ganhar dinheiro enquanto dorme.</p>
     </div>
   </div>
-
-  <script>
-    // Função para criar o contador regressivo
-    function updateCountdown() {
-      const targetDate = new Date("May 1, 2025 00:00:00").getTime();
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-      if (distance < 0) {
-        document.getElementById("countdown").innerHTML = "A promoção acabou!";
-      }
-    }
-
-    setInterval(updateCountdown, 1000);
-  </script>
 
 </body>
 </html>
