@@ -27,7 +27,7 @@
     }
 
     .overlay {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.6);
       position: absolute;
       top: 0;
       left: 0;
@@ -51,16 +51,17 @@
     }
 
     .title {
-      font-size: 3em;
+      font-size: 3.5em;
       font-weight: bold;
       animation: slideIn 1.5s ease-out;
     }
 
     .subtitle {
-      font-size: 1.3em;
-      margin-top: 10px;
+      font-size: 1.4em;
+      margin-top: 15px;
       color: #ffde59;
       max-width: 600px;
+      line-height: 1.5;
     }
 
     .price {
@@ -86,78 +87,65 @@
       transform: scale(1.1);
     }
 
-    .section {
-      padding: 80px 20px;
-      text-align: center;
-      color: white;
-      background-color: #111;
-      margin-top: 50px;
-    }
-
-    .section h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
-
-    .section p {
-      font-size: 1.1em;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .benefits {
+    .feature-section {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
-      margin-top: 40px;
+      padding: 50px 20px;
+      background-color: #111;
+      text-align: center;
     }
 
-    .benefit {
+    .feature {
       background: #333;
       border: 1px solid #444;
-      padding: 25px;
-      margin: 15px;
+      padding: 30px;
+      margin: 20px;
       border-radius: 10px;
-      width: 23%;
+      width: 250px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s;
     }
 
-    .benefit:hover {
+    .feature:hover {
       transform: translateY(-10px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
 
-    .testimonials {
-      margin-top: 60px;
-    }
-
-    .testimonial {
-      font-size: 1.1em;
+    .feature h3 {
+      font-size: 1.5em;
       color: #ffde59;
-      margin-top: 15px;
     }
 
-    .testimonial-author {
-      font-weight: bold;
-    }
-
-    .cta {
-      background-color: #222;
-      padding: 50px;
-      margin-top: 60px;
-      border-radius: 10px;
-    }
-
-    .cta h2 {
+    .feature p {
+      font-size: 1.1em;
       color: white;
-      font-size: 2em;
+    }
+
+    .cta-section {
+      background-color: #222;
+      padding: 60px 20px;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      color: white;
+      font-size: 2.5em;
       margin-bottom: 20px;
     }
 
-    .cta button {
+    .cta-section p {
+      color: white;
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cta-section button {
       padding: 15px 40px;
-      font-size: 1.2em;
+      font-size: 1.5em;
       color: white;
       background: #ff6200;
       border: none;
@@ -165,7 +153,7 @@
       cursor: pointer;
     }
 
-    .cta button:hover {
+    .cta-section button:hover {
       background: #ff7f00;
     }
 
@@ -200,44 +188,34 @@
 
   <div class="content">
     <h1 class="title">Transforme sua Vida com Lucros Rápidos</h1>
-    <p class="subtitle">Descubra o passo a passo para lucrar na internet ainda hoje. Método testado, prático e direto ao ponto!</p>
+    <p class="subtitle">Descubra o passo a passo para lucrar na internet ainda hoje. Método testado, prático e direto ao ponto! Aprenda a gerar sua primeira renda em poucos dias.</p>
     <p class="price">De <del>R$98,90</del> por apenas <strong>R$19,90</strong>!</p>
     <button class="button" onclick="window.location.href='https://seulink.com/ebook'">Quero meu E-book agora!</button>
   </div>
 
-  <div class="section">
-    <h2>O que você vai aprender:</h2>
-    <p>Com este e-book, você terá acesso a estratégias comprovadas para começar a gerar renda de forma rápida e eficaz. Não perca tempo, comece hoje mesmo!</p>
-    <div class="benefits">
-      <div class="benefit">
-        <h3>Ganhos Rápidos</h3>
-        <p>Métodos comprovados para gerar lucro em curto prazo.</p>
-      </div>
-      <div class="benefit">
-        <h3>Marketing Digital</h3>
-        <p>Como usar as redes sociais para atrair clientes facilmente.</p>
-      </div>
-      <div class="benefit">
-        <h3>Transforme sua Mentalidade</h3>
-        <p>Aprenda os hábitos das pessoas de sucesso e aplique-os no seu dia a dia.</p>
-      </div>
-      <div class="benefit">
-        <h3>Estratégias Simples</h3>
-        <p>Crie uma estrutura de vendas automatizada e sem complicação.</p>
-      </div>
+  <div class="feature-section">
+    <div class="feature">
+      <h3>Ganhos Imediatos</h3>
+      <p>Aprenda como gerar lucro rápido, com métodos práticos e fáceis de aplicar.</p>
+    </div>
+    <div class="feature">
+      <h3>Marketing Digital</h3>
+      <p>Domine as melhores estratégias de marketing digital para atrair clientes para o seu negócio.</p>
+    </div>
+    <div class="feature">
+      <h3>Mentalidade de Sucesso</h3>
+      <p>Transforme sua mentalidade e aprenda os hábitos dos empreendedores bem-sucedidos.</p>
+    </div>
+    <div class="feature">
+      <h3>Estrutura de Vendas</h3>
+      <p>Crie um sistema de vendas simples e automático para ganhar dinheiro enquanto dorme.</p>
     </div>
   </div>
 
-  <div class="testimonials">
-    <h2>Depoimentos de Quem Já Comprou</h2>
-    <p class="testimonial">"Este e-book mudou a forma como eu encarava o mercado digital! Em poucos dias já consegui ver os resultados!" <span class="testimonial-author">- Lucas Pereira</span></p>
-    <p class="testimonial">"A abordagem simples e direta me ajudou a gerar mais vendas online. Valeu muito a pena!" <span class="testimonial-author">- Carla Mendes</span></p>
-  </div>
-
-  <div class="cta">
-    <h2>Não Perca essa Oportunidade</h2>
-    <p>Adquira agora o e-book com um desconto incrível e comece a mudar sua vida financeira.</p>
-    <button onclick="window.location.href='https://seulink.com/ebook'">Quero Comprar Agora!</button>
+  <div class="cta-section">
+    <h2>Não Deixe Essa Oportunidade Passar!</h2>
+    <p>O conhecimento e as estratégias que você precisa para alcançar sua liberdade financeira estão neste e-book. Comece hoje mesmo e veja os resultados!</p>
+    <button onclick="window.location.href='https://seulink.com/ebook'">Compre Agora e Mude Sua Vida!</button>
   </div>
 
 </body>
