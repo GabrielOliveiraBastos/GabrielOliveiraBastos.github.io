@@ -26,6 +26,16 @@
       z-index: -1;
     }
 
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
     .content {
       position: relative;
       z-index: 1;
@@ -35,7 +45,6 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: rgba(0, 0, 0, 0.5);
       color: white;
       padding: 20px;
     }
@@ -45,9 +54,16 @@
       animation: fadeInDown 1s ease-out;
     }
 
+    .subtitle {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #ffde59;
+      max-width: 600px;
+    }
+
     .price {
       font-size: 1.5em;
-      margin-top: 10px;
+      margin-top: 20px;
       color: #00ff88;
     }
 
@@ -68,6 +84,40 @@
       transform: scale(1.05);
     }
 
+    .section {
+      background-color: #111;
+      padding: 50px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 1em;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .benefits {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .benefit {
+      background: #222;
+      border: 1px solid #333;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      width: 250px;
+    }
+
     @keyframes fadeInDown {
       from {
         opacity: 0;
@@ -86,11 +136,40 @@
     <source src="https://github.com/GabrielOliveiraBastos/GabrielOliveiraBastos.github.io/raw/main/ssstik.io_%40fzvision.ofc_1743114996161.mp4" type="video/mp4">
     Seu navegador não suporta vídeos HTML5.
   </video>
+  <div class="overlay"></div>
 
   <div class="content">
     <h1 class="title">Transforme sua Vida com Lucros Rápidos</h1>
+    <p class="subtitle">Descubra o passo a passo para lucrar na internet ainda hoje. Método testado, prático e direto ao ponto!</p>
     <p class="price">De <del>R$98,90</del> por apenas <strong>R$19,90</strong>!</p>
     <button class="button" onclick="window.location.href='https://seulink.com/ebook'">Quero meu E-book agora!</button>
+  </div>
+
+  <div class="section">
+    <h2>O que você vai aprender:</h2>
+    <div class="benefits">
+      <div class="benefit">
+        <h3>Ganhos Rápidos</h3>
+        <p>Métodos para gerar renda ainda nos primeiros dias.</p>
+      </div>
+      <div class="benefit">
+        <h3>Marketing Digital</h3>
+        <p>Como atrair clientes usando redes sociais e tráfego certo.</p>
+      </div>
+      <div class="benefit">
+        <h3>Mentalidade de Sucesso</h3>
+        <p>Rotina e hábitos dos que vencem no jogo do dinheiro.</p>
+      </div>
+      <div class="benefit">
+        <h3>Negócio Online</h3>
+        <p>Monte sua estrutura simples e automática de vendas.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Garantia incondicional de 7 dias</h2>
+    <p>Se em até 7 dias você achar que o conteúdo não te ajudou, devolvemos 100% do seu dinheiro. Risco zero!</p>
   </div>
 
 </body>
