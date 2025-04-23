@@ -24,7 +24,7 @@
       min-height: 100%;
       object-fit: cover;
       z-index: -1;
-      animation: moveBackground 15s infinite linear;
+      animation: moveBackground 20s infinite linear;
     }
 
     .overlay {
@@ -88,7 +88,7 @@
     }
 
     .title {
-      font-size: 3.5em;
+      font-size: 4em;
       font-weight: bold;
       animation: slideIn 1.5s ease-out;
     }
@@ -225,6 +225,7 @@
 </head>
 <body>
 
+  <!-- Adicionando múltiplos vídeos em loop -->
   <video class="video-bg" autoplay loop muted playsinline>
     <source src="https://github.com/GabrielOliveiraBastos/GabrielOliveiraBastos.github.io/raw/main/ssstik.io_%40fzvision.ofc_1743114996161.mp4" type="video/mp4">
     Seu navegador não suporta vídeos HTML5.
@@ -242,7 +243,12 @@
     <h1 class="title">Transforme sua Vida com Lucros Rápidos</h1>
     <p class="subtitle">Descubra o passo a passo para lucrar na internet ainda hoje. Método testado, prático e direto ao ponto! Aprenda a gerar sua primeira renda em poucos dias.</p>
     <p class="price">De <del>R$98,90</del> por apenas <strong>R$19,90</strong>!</p>
-    <button class="button" onclick="window.location.href='https://seulink.com/ebook'">Quero meu E-book agora!</button>
+    <!-- Botão de compra agora mais abaixo -->
+    <div class="cta-section">
+      <h2>Não Deixe Essa Oportunidade Passar!</h2>
+      <p>O conhecimento e as estratégias que você precisa para alcançar sua liberdade financeira estão neste e-book. Comece hoje mesmo e veja os resultados!</p>
+      <button onclick="window.location.href='https://seulink.com/ebook'">Compre Agora e Mude Sua Vida!</button>
+    </div>
     <!-- Contador Regressivo -->
     <div class="countdown" id="countdown"></div>
   </div>
@@ -264,12 +270,6 @@
       <h3>Estrutura de Vendas</h3>
       <p>Crie um sistema de vendas simples e automático para ganhar dinheiro enquanto dorme.</p>
     </div>
-  </div>
-
-  <div class="cta-section" id="cta">
-    <h2>Não Deixe Essa Oportunidade Passar!</h2>
-    <p>O conhecimento e as estratégias que você precisa para alcançar sua liberdade financeira estão neste e-book. Comece hoje mesmo e veja os resultados!</p>
-    <button onclick="window.location.href='https://seulink.com/ebook'">Compre Agora e Mude Sua Vida!</button>
   </div>
 
   <script>
