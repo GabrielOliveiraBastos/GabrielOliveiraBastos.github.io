@@ -13,7 +13,7 @@
 
     body, html {
       height: 100%;
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
     }
 
     .video-bg {
@@ -27,7 +27,7 @@
     }
 
     .overlay {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.7);
       position: absolute;
       top: 0;
       left: 0;
@@ -47,32 +47,34 @@
       text-align: center;
       color: white;
       padding: 20px;
+      animation: fadeIn 1.5s ease-out;
     }
 
     .title {
       font-size: 3em;
-      animation: fadeInDown 1s ease-out;
+      font-weight: bold;
+      animation: slideIn 1.5s ease-out;
     }
 
     .subtitle {
-      font-size: 1.2em;
+      font-size: 1.3em;
       margin-top: 10px;
       color: #ffde59;
       max-width: 600px;
     }
 
     .price {
-      font-size: 1.5em;
-      margin-top: 20px;
-      color: #00ff88;
+      font-size: 2em;
+      margin-top: 30px;
+      color: #ff4f00;
     }
 
     .button {
       margin-top: 30px;
       padding: 15px 30px;
-      font-size: 1.2em;
+      font-size: 1.5em;
       color: white;
-      background: #ff4f00;
+      background: #ff6200;
       border: none;
       border-radius: 10px;
       cursor: pointer;
@@ -80,46 +82,54 @@
     }
 
     .button:hover {
-      background: #ff6f00;
-      transform: scale(1.05);
+      background: #ff7f00;
+      transform: scale(1.1);
     }
 
     .section {
-      background-color: #111;
-      padding: 50px 20px;
+      padding: 80px 20px;
       text-align: center;
       color: white;
+      background-color: #111;
+      margin-top: 50px;
     }
 
     .section h2 {
-      font-size: 2em;
+      font-size: 2.5em;
       margin-bottom: 20px;
     }
 
     .section p {
-      font-size: 1em;
-      max-width: 800px;
+      font-size: 1.1em;
+      max-width: 900px;
       margin: 0 auto;
     }
 
     .benefits {
       display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 30px;
+      margin-top: 40px;
     }
 
     .benefit {
-      background: #222;
-      border: 1px solid #333;
-      padding: 20px;
-      margin: 10px;
+      background: #333;
+      border: 1px solid #444;
+      padding: 25px;
+      margin: 15px;
       border-radius: 10px;
-      width: 250px;
+      width: 23%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .benefit:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
 
     .testimonials {
-      margin-top: 40px;
+      margin-top: 60px;
     }
 
     .testimonial {
@@ -132,14 +142,50 @@
       font-weight: bold;
     }
 
-    @keyframes fadeInDown {
+    .cta {
+      background-color: #222;
+      padding: 50px;
+      margin-top: 60px;
+      border-radius: 10px;
+    }
+
+    .cta h2 {
+      color: white;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .cta button {
+      padding: 15px 40px;
+      font-size: 1.2em;
+      color: white;
+      background: #ff6200;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .cta button:hover {
+      background: #ff7f00;
+    }
+
+    @keyframes fadeIn {
       from {
         opacity: 0;
-        transform: translateY(-20px);
       }
       to {
         opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
         transform: translateY(0);
+        opacity: 1;
       }
     }
   </style>
@@ -161,35 +207,37 @@
 
   <div class="section">
     <h2>O que você vai aprender:</h2>
+    <p>Com este e-book, você terá acesso a estratégias comprovadas para começar a gerar renda de forma rápida e eficaz. Não perca tempo, comece hoje mesmo!</p>
     <div class="benefits">
       <div class="benefit">
         <h3>Ganhos Rápidos</h3>
-        <p>Métodos para gerar renda ainda nos primeiros dias.</p>
+        <p>Métodos comprovados para gerar lucro em curto prazo.</p>
       </div>
       <div class="benefit">
         <h3>Marketing Digital</h3>
-        <p>Como atrair clientes usando redes sociais e tráfego certo.</p>
+        <p>Como usar as redes sociais para atrair clientes facilmente.</p>
       </div>
       <div class="benefit">
-        <h3>Mentalidade de Sucesso</h3>
-        <p>Rotina e hábitos dos que vencem no jogo do dinheiro.</p>
+        <h3>Transforme sua Mentalidade</h3>
+        <p>Aprenda os hábitos das pessoas de sucesso e aplique-os no seu dia a dia.</p>
       </div>
       <div class="benefit">
-        <h3>Negócio Online</h3>
-        <p>Monte sua estrutura simples e automática de vendas.</p>
+        <h3>Estratégias Simples</h3>
+        <p>Crie uma estrutura de vendas automatizada e sem complicação.</p>
       </div>
     </div>
   </div>
 
   <div class="testimonials">
-    <h2>O que nossos clientes dizem:</h2>
-    <p class="testimonial">"Este e-book mudou minha vida! Em menos de uma semana, já estava vendo os primeiros resultados. Vale cada centavo!" <span class="testimonial-author">- João Silva</span></p>
-    <p class="testimonial">"Se você está procurando uma maneira simples e eficaz de ganhar dinheiro online, este e-book é para você." <span class="testimonial-author">- Maria Oliveira</span></p>
+    <h2>Depoimentos de Quem Já Comprou</h2>
+    <p class="testimonial">"Este e-book mudou a forma como eu encarava o mercado digital! Em poucos dias já consegui ver os resultados!" <span class="testimonial-author">- Lucas Pereira</span></p>
+    <p class="testimonial">"A abordagem simples e direta me ajudou a gerar mais vendas online. Valeu muito a pena!" <span class="testimonial-author">- Carla Mendes</span></p>
   </div>
 
-  <div class="section">
-    <h2>Garantia incondicional de 7 dias</h2>
-    <p>Se em até 7 dias você achar que o conteúdo não te ajudou, devolvemos 100% do seu dinheiro. Risco zero!</p>
+  <div class="cta">
+    <h2>Não Perca essa Oportunidade</h2>
+    <p>Adquira agora o e-book com um desconto incrível e comece a mudar sua vida financeira.</p>
+    <button onclick="window.location.href='https://seulink.com/ebook'">Quero Comprar Agora!</button>
   </div>
 
 </body>
