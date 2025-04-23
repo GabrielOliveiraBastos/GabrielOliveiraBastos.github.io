@@ -170,30 +170,42 @@
       text-align: center;
     }
 
+    .feature-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
     .feature {
-      display: inline-block;
-      width: 22%;
-      margin: 20px;
       background: #fff;
-      padding: 20px;
-      border-radius: 8px;
+      padding: 30px;
+      border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
     }
 
     .feature h3 {
       font-size: 1.8em;
+      color: #333;
       margin-bottom: 15px;
     }
 
     .feature p {
-      font-size: 1.2em;
-      color: #555;
+      font-size: 1.1em;
+      color: #666;
+      line-height: 1.5;
     }
 
     .feature img {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 15px;
+      width: 70px;
+      height: 70px;
+      margin-bottom: 20px;
     }
 
   </style>
@@ -238,29 +250,27 @@
 
   <!-- Benefícios -->
   <div class="feature-section" id="features">
-    <div class="feature">
-      <h3>Ganhos Imediatos</h3>
-      <p>Aprenda como gerar lucro rápido, com métodos práticos e fáceis de aplicar.</p>
-    </div>
-    <div class="feature">
-      <h3>Marketing Digital</h3>
-      <p>Domine as melhores estratégias de marketing digital para atrair clientes para o seu negócio.</p>
-    </div>
-    <div class="feature">
-      <h3>Mentalidade de Sucesso</h3>
-      <p>Transforme sua mentalidade e aprenda os hábitos dos empreendedores bem-sucedidos.</p>
-    </div>
-    <div class="feature">
-      <h3>Estrutura de Vendas</h3>
-      <p>Crie um sistema de vendas simples e automático para ganhar dinheiro enquanto dorme.</p>
-    </div>
-    <div class="feature">
-      <h3>Rendimento Passivo</h3>
-      <p>Descubra como trabalhar uma vez e continuar recebendo pelo resto da vida.</p>
-    </div>
-    <div class="feature">
-      <h3>Escalabilidade</h3>
-      <p>Aprenda a escalar seus resultados para alcançar lucros ainda maiores.</p>
+    <div class="feature-container">
+      <div class="feature">
+        <img src="https://via.placeholder.com/70" alt="Ícone de Ganhos Imediatos">
+        <h3>Ganhos Imediatos</h3>
+        <p>Aprenda a gerar lucro rápido, com métodos práticos e fáceis de aplicar.</p>
+      </div>
+      <div class="feature">
+        <img src="https://via.placeholder.com/70" alt="Ícone de Marketing Digital">
+        <h3>Marketing Digital</h3>
+        <p>Domine as melhores estratégias de marketing digital para atrair clientes para o seu negócio.</p>
+      </div>
+      <div class="feature">
+        <img src="https://via.placeholder.com/70" alt="Ícone de Sucesso">
+        <h3>Mentalidade de Sucesso</h3>
+        <p>Transforme sua mentalidade e aprenda os hábitos dos empreendedores bem-sucedidos.</p>
+      </div>
+      <div class="feature">
+        <img src="https://via.placeholder.com/70" alt="Ícone de Escalabilidade">
+        <h3>Escalabilidade</h3>
+        <p>Aprenda a escalar seus resultados para alcançar lucros ainda maiores.</p>
+      </div>
     </div>
   </div>
 
